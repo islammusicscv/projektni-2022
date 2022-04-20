@@ -22,6 +22,10 @@ export class UserService {
         return this.userRepository.findOne({id});
     }
 
+    findOneByEmail(email:string) : Promise<User> {
+        return this.userRepository.findOne({email});
+    }
+
     delete(id:number) {
         return this.userRepository.delete({id});
     }
